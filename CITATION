@@ -89,11 +89,11 @@ If you use the unpolarised operator matrix elements please cite:
   [arXiv:2403.00513 [hep-ph]].
 %-------------------------------------------------------------------------------
 %[9] Implementation
-\bibitem{VFNS}
+\bibitem{Ablinger:2025joi}
   J.~Ablinger, A.~Behring, J.~Bl\"umlein, A.~De Freitas, A.~von Manteuffel,
   C.~Schneider and K.~Sch\"onwald,
-  \textit{The Single-Mass Variable Flavor Number Scheme at Three-Loop Order}
-  DESY 24-037
+  \textit{The Single-Mass Variable Flavor Number Scheme at Three-Loop Order},
+  arXiv:2510.02175 [hep-ph].
 %-------------------------------------------------------------------------------
 
 
@@ -166,9 +166,9 @@ If you use the polarised operator matrix elements please cite:
   [arXiv:2403.00513 [hep-ph]].
 %-------------------------------------------------------------------------------
 %[8] Implementation
-\bibitem{VFNS}
+\bibitem{Ablinger:2025joi}
   J.~Ablinger, A.~Behring, J.~Bl\"umlein, A.~De Freitas, A.~von Manteuffel,
   C.~Schneider and K.~Sch\"onwald,
-  \textit{The Single-Mass Variable Flavor Number Scheme at Three-Loop Order}
-  DESY 24-037
+  \textit{The Single-Mass Variable Flavor Number Scheme at Three-Loop Order},
+  arXiv:2510.02175 [hep-ph].
 %-------------------------------------------------------------------------------
