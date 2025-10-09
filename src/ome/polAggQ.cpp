@@ -24,7 +24,7 @@ namespace ome
             {
               // polAggQ_reg as^2 LM^0 NF^0 [below 0.375]
               make_ome_genps(
-                f_id<double>,
+                std::function<double(double)>(f_id<double>),
                 // polAggQ_reg as^2 LM^0 NF^0 [below 0.375] y=x
                 ome_logx<double>({
                   // polAggQ_reg as^2 LM^0 NF^0 [below 0.375] y=x H[0, y]^0
@@ -61,7 +61,7 @@ namespace ome
               ),
               // polAggQ_reg as^2 LM^0 NF^0 [0.375,0.625]
               make_ome_genps(
-                f_half<double>,
+                std::function<double(double)>(f_half<double>),
                 // polAggQ_reg as^2 LM^0 NF^0 [0.375,0.625] y=1/2-x
                 ome_logx<double>({
                   // polAggQ_reg as^2 LM^0 NF^0 [0.375,0.625] y=1/2-x H[0, y]^0
@@ -91,7 +91,7 @@ namespace ome
               ),
               // polAggQ_reg as^2 LM^0 NF^0 [above 0.625]
               make_ome_genps(
-                f_omx<double>,
+                std::function<double(double)>(f_omx<double>),
                 // polAggQ_reg as^2 LM^0 NF^0 [above 0.625] y=1-x
                 ome_logx<double>({
                   // polAggQ_reg as^2 LM^0 NF^0 [above 0.625] y=1-x H[0, y]^0
@@ -131,7 +131,7 @@ namespace ome
             {
               // polAggQ_reg as^2 LM^1 NF^0 [below 0.375]
               make_ome_genps(
-                f_id<double>,
+                std::function<double(double)>(f_id<double>),
                 // polAggQ_reg as^2 LM^1 NF^0 [below 0.375] y=x
                 ome_logx<double>({
                   // polAggQ_reg as^2 LM^1 NF^0 [below 0.375] y=x H[0, y]^0
@@ -150,7 +150,7 @@ namespace ome
               ),
               // polAggQ_reg as^2 LM^1 NF^0 [0.375,0.625]
               make_ome_genps(
-                f_half<double>,
+                std::function<double(double)>(f_half<double>),
                 // polAggQ_reg as^2 LM^1 NF^0 [0.375,0.625] y=1/2-x
                 ome_logx<double>({
                   // polAggQ_reg as^2 LM^1 NF^0 [0.375,0.625] y=1/2-x H[0, y]^0
@@ -177,7 +177,7 @@ namespace ome
               ),
               // polAggQ_reg as^2 LM^1 NF^0 [above 0.625]
               make_ome_genps(
-                f_omx<double>,
+                std::function<double(double)>(f_omx<double>),
                 // polAggQ_reg as^2 LM^1 NF^0 [above 0.625] y=1-x
                 ome_logx<double>({
                   // polAggQ_reg as^2 LM^1 NF^0 [above 0.625] y=1-x H[0, y]^0
@@ -213,7 +213,7 @@ namespace ome
             {
               // polAggQ_reg as^2 LM^2 NF^0 [below 0.375]
               make_ome_genps(
-                f_id<double>,
+                std::function<double(double)>(f_id<double>),
                 // polAggQ_reg as^2 LM^2 NF^0 [below 0.375] y=x
                 ome_logx<double>({
                   // polAggQ_reg as^2 LM^2 NF^0 [below 0.375] y=x H[0, y]^0
@@ -228,7 +228,7 @@ namespace ome
               ),
               // polAggQ_reg as^2 LM^2 NF^0 [0.375,0.625]
               make_ome_genps(
-                f_half<double>,
+                std::function<double(double)>(f_half<double>),
                 // polAggQ_reg as^2 LM^2 NF^0 [0.375,0.625] y=1/2-x
                 ome_logx<double>({
                   // polAggQ_reg as^2 LM^2 NF^0 [0.375,0.625] y=1/2-x H[0, y]^0
@@ -258,7 +258,7 @@ namespace ome
               ),
               // polAggQ_reg as^2 LM^2 NF^0 [above 0.625]
               make_ome_genps(
-                f_omx<double>,
+                std::function<double(double)>(f_omx<double>),
                 // polAggQ_reg as^2 LM^2 NF^0 [above 0.625] y=1-x
                 ome_logx<double>({
                   // polAggQ_reg as^2 LM^2 NF^0 [above 0.625] y=1-x H[0, y]^0
@@ -297,7 +297,7 @@ namespace ome
             {
               // polAggQ_reg as^3 LM^0 NF^0 [below 0.375]
               make_ome_genps(
-                f_id<double>,
+                std::function<double(double)>(f_id<double>),
                 // polAggQ_reg as^3 LM^0 NF^0 [below 0.375] y=x
                 ome_logx<double>({
                   // polAggQ_reg as^3 LM^0 NF^0 [below 0.375] y=x H[0, y]^0
@@ -400,7 +400,7 @@ namespace ome
               ),
               // polAggQ_reg as^3 LM^0 NF^0 [0.375,0.625]
               make_ome_genps(
-                f_half<double>,
+                std::function<double(double)>(f_half<double>),
                 // polAggQ_reg as^3 LM^0 NF^0 [0.375,0.625] y=1/2-x
                 ome_logx<double>({
                   // polAggQ_reg as^3 LM^0 NF^0 [0.375,0.625] y=1/2-x H[0, y]^0
@@ -427,7 +427,7 @@ namespace ome
               ),
               // polAggQ_reg as^3 LM^0 NF^0 [above 0.625]
               make_ome_genps(
-                f_omx<double>,
+                std::function<double(double)>(f_omx<double>),
                 // polAggQ_reg as^3 LM^0 NF^0 [above 0.625] y=1-x
                 ome_logx<double>({
                   // polAggQ_reg as^3 LM^0 NF^0 [above 0.625] y=1-x H[0, y]^0
@@ -540,7 +540,7 @@ namespace ome
             {
               // polAggQ_reg as^3 LM^0 NF^1 [below 0.375]
               make_ome_genps(
-                f_id<double>,
+                std::function<double(double)>(f_id<double>),
                 // polAggQ_reg as^3 LM^0 NF^1 [below 0.375] y=x
                 ome_logx<double>({
                   // polAggQ_reg as^3 LM^0 NF^1 [below 0.375] y=x H[0, y]^0
@@ -622,7 +622,7 @@ namespace ome
               ),
               // polAggQ_reg as^3 LM^0 NF^1 [0.375,0.625]
               make_ome_genps(
-                f_half<double>,
+                std::function<double(double)>(f_half<double>),
                 // polAggQ_reg as^3 LM^0 NF^1 [0.375,0.625] y=1/2-x
                 ome_logx<double>({
                   // polAggQ_reg as^3 LM^0 NF^1 [0.375,0.625] y=1/2-x H[0, y]^0
@@ -652,7 +652,7 @@ namespace ome
               ),
               // polAggQ_reg as^3 LM^0 NF^1 [above 0.625]
               make_ome_genps(
-                f_omx<double>,
+                std::function<double(double)>(f_omx<double>),
                 // polAggQ_reg as^3 LM^0 NF^1 [above 0.625] y=1-x
                 ome_logx<double>({
                   // polAggQ_reg as^3 LM^0 NF^1 [above 0.625] y=1-x H[0, y]^0
@@ -748,7 +748,7 @@ namespace ome
             {
               // polAggQ_reg as^3 LM^1 NF^0 [below 0.375]
               make_ome_genps(
-                f_id<double>,
+                std::function<double(double)>(f_id<double>),
                 // polAggQ_reg as^3 LM^1 NF^0 [below 0.375] y=x
                 ome_logx<double>({
                   // polAggQ_reg as^3 LM^1 NF^0 [below 0.375] y=x H[0, y]^0
@@ -823,7 +823,7 @@ namespace ome
               ),
               // polAggQ_reg as^3 LM^1 NF^0 [0.375,0.625]
               make_ome_genps(
-                f_half<double>,
+                std::function<double(double)>(f_half<double>),
                 // polAggQ_reg as^3 LM^1 NF^0 [0.375,0.625] y=1/2-x
                 ome_logx<double>({
                   // polAggQ_reg as^3 LM^1 NF^0 [0.375,0.625] y=1/2-x H[0, y]^0
@@ -850,7 +850,7 @@ namespace ome
               ),
               // polAggQ_reg as^3 LM^1 NF^0 [above 0.625]
               make_ome_genps(
-                f_omx<double>,
+                std::function<double(double)>(f_omx<double>),
                 // polAggQ_reg as^3 LM^1 NF^0 [above 0.625] y=1-x
                 ome_logx<double>({
                   // polAggQ_reg as^3 LM^1 NF^0 [above 0.625] y=1-x H[0, y]^0
@@ -943,7 +943,7 @@ namespace ome
             {
               // polAggQ_reg as^3 LM^1 NF^1 [below 0.375]
               make_ome_genps(
-                f_id<double>,
+                std::function<double(double)>(f_id<double>),
                 // polAggQ_reg as^3 LM^1 NF^1 [below 0.375] y=x
                 ome_logx<double>({
                   // polAggQ_reg as^3 LM^1 NF^1 [below 0.375] y=x H[0, y]^0
@@ -1001,7 +1001,7 @@ namespace ome
               ),
               // polAggQ_reg as^3 LM^1 NF^1 [0.375,0.625]
               make_ome_genps(
-                f_half<double>,
+                std::function<double(double)>(f_half<double>),
                 // polAggQ_reg as^3 LM^1 NF^1 [0.375,0.625] y=1/2-x
                 ome_logx<double>({
                   // polAggQ_reg as^3 LM^1 NF^1 [0.375,0.625] y=1/2-x H[0, y]^0
@@ -1031,7 +1031,7 @@ namespace ome
               ),
               // polAggQ_reg as^3 LM^1 NF^1 [above 0.625]
               make_ome_genps(
-                f_omx<double>,
+                std::function<double(double)>(f_omx<double>),
                 // polAggQ_reg as^3 LM^1 NF^1 [above 0.625] y=1-x
                 ome_logx<double>({
                   // polAggQ_reg as^3 LM^1 NF^1 [above 0.625] y=1-x H[0, y]^0
@@ -1106,7 +1106,7 @@ namespace ome
             {
               // polAggQ_reg as^3 LM^2 NF^0 [below 0.375]
               make_ome_genps(
-                f_id<double>,
+                std::function<double(double)>(f_id<double>),
                 // polAggQ_reg as^3 LM^2 NF^0 [below 0.375] y=x
                 ome_logx<double>({
                   // polAggQ_reg as^3 LM^2 NF^0 [below 0.375] y=x H[0, y]^0
@@ -1162,7 +1162,7 @@ namespace ome
               ),
               // polAggQ_reg as^3 LM^2 NF^0 [0.375,0.625]
               make_ome_genps(
-                f_half<double>,
+                std::function<double(double)>(f_half<double>),
                 // polAggQ_reg as^3 LM^2 NF^0 [0.375,0.625] y=1/2-x
                 ome_logx<double>({
                   // polAggQ_reg as^3 LM^2 NF^0 [0.375,0.625] y=1/2-x H[0, y]^0
@@ -1191,7 +1191,7 @@ namespace ome
               ),
               // polAggQ_reg as^3 LM^2 NF^0 [above 0.625]
               make_ome_genps(
-                f_omx<double>,
+                std::function<double(double)>(f_omx<double>),
                 // polAggQ_reg as^3 LM^2 NF^0 [above 0.625] y=1-x
                 ome_logx<double>({
                   // polAggQ_reg as^3 LM^2 NF^0 [above 0.625] y=1-x H[0, y]^0
@@ -1247,7 +1247,7 @@ namespace ome
             {
               // polAggQ_reg as^3 LM^3 NF^0 [below 0.375]
               make_ome_genps(
-                f_id<double>,
+                std::function<double(double)>(f_id<double>),
                 // polAggQ_reg as^3 LM^3 NF^0 [below 0.375] y=x
                 ome_logx<double>({
                   // polAggQ_reg as^3 LM^3 NF^0 [below 0.375] y=x H[0, y]^0
@@ -1282,7 +1282,7 @@ namespace ome
               ),
               // polAggQ_reg as^3 LM^3 NF^0 [0.375,0.625]
               make_ome_genps(
-                f_half<double>,
+                std::function<double(double)>(f_half<double>),
                 // polAggQ_reg as^3 LM^3 NF^0 [0.375,0.625] y=1/2-x
                 ome_logx<double>({
                   // polAggQ_reg as^3 LM^3 NF^0 [0.375,0.625] y=1/2-x H[0, y]^0
@@ -1311,7 +1311,7 @@ namespace ome
               ),
               // polAggQ_reg as^3 LM^3 NF^0 [above 0.625]
               make_ome_genps(
-                f_omx<double>,
+                std::function<double(double)>(f_omx<double>),
                 // polAggQ_reg as^3 LM^3 NF^0 [above 0.625] y=1-x
                 ome_logx<double>({
                   // polAggQ_reg as^3 LM^3 NF^0 [above 0.625] y=1-x H[0, y]^0
@@ -1364,7 +1364,7 @@ namespace ome
             {
               // polAggQ_reg as^3 LM^3 NF^1 [below 0.375]
               make_ome_genps(
-                f_id<double>,
+                std::function<double(double)>(f_id<double>),
                 // polAggQ_reg as^3 LM^3 NF^1 [below 0.375] y=x
                 ome_logx<double>({
                   // polAggQ_reg as^3 LM^3 NF^1 [below 0.375] y=x H[0, y]^0
@@ -1379,7 +1379,7 @@ namespace ome
               ),
               // polAggQ_reg as^3 LM^3 NF^1 [0.375,0.625]
               make_ome_genps(
-                f_half<double>,
+                std::function<double(double)>(f_half<double>),
                 // polAggQ_reg as^3 LM^3 NF^1 [0.375,0.625] y=1/2-x
                 ome_logx<double>({
                   // polAggQ_reg as^3 LM^3 NF^1 [0.375,0.625] y=1/2-x H[0, y]^0
@@ -1408,7 +1408,7 @@ namespace ome
               ),
               // polAggQ_reg as^3 LM^3 NF^1 [above 0.625]
               make_ome_genps(
-                f_omx<double>,
+                std::function<double(double)>(f_omx<double>),
                 // polAggQ_reg as^3 LM^3 NF^1 [above 0.625] y=1-x
                 ome_logx<double>({
                   // polAggQ_reg as^3 LM^3 NF^1 [above 0.625] y=1-x H[0, y]^0

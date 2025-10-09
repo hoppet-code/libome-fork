@@ -24,7 +24,7 @@ namespace ome
             {
               // AQg_reg as^1 LM^1 NF^0 [below 0.03125]
               make_ome_genps(
-                f_id<double>,
+                std::function<double(double)>(f_id<double>),
                 // AQg_reg as^1 LM^1 NF^0 [below 0.03125] y=x
                 ome_logx<double>({
                   // AQg_reg as^1 LM^1 NF^0 [below 0.03125] y=x H[0, y]^0
@@ -35,7 +35,7 @@ namespace ome
               ),
               // AQg_reg as^1 LM^1 NF^0 [0.03125,0.18]
               make_ome_genps(
-                f_moebius<double,-1,16,1,14>,
+                std::function<double(double)>(f_moebius<double,-1,16,1,14>),
                 // AQg_reg as^1 LM^1 NF^0 [0.03125,0.18] y=(-1+16*x)/(1+14*x)
                 ome_logx<double>({
                   // AQg_reg as^1 LM^1 NF^0 [0.03125,0.18] y=(-1+16*x)/(1+14*x) H[0, y]^0
@@ -63,7 +63,7 @@ namespace ome
               ),
               // AQg_reg as^1 LM^1 NF^0 [0.18,0.34]
               make_ome_genps(
-                f_moebius<double,-1,4,1,2>,
+                std::function<double(double)>(f_moebius<double,-1,4,1,2>),
                 // AQg_reg as^1 LM^1 NF^0 [0.18,0.34] y=(-1+4*x)/(1+2*x)
                 ome_logx<double>({
                   // AQg_reg as^1 LM^1 NF^0 [0.18,0.34] y=(-1+4*x)/(1+2*x) H[0, y]^0
@@ -83,7 +83,7 @@ namespace ome
               ),
               // AQg_reg as^1 LM^1 NF^0 [0.34,0.59]
               make_ome_genps(
-                f_linear<double,-1,2>,
+                std::function<double(double)>(f_linear<double,-1,2>),
                 // AQg_reg as^1 LM^1 NF^0 [0.34,0.59] y=-1+2*z
                 ome_logx<double>({
                   // AQg_reg as^1 LM^1 NF^0 [0.34,0.59] y=-1+2*z H[0, y]^0
@@ -94,7 +94,7 @@ namespace ome
               ),
               // AQg_reg as^1 LM^1 NF^0 [0.59,0.71]
               make_ome_genps(
-                f_moebius<double,-2,3,-2,1>,
+                std::function<double(double)>(f_moebius<double,-2,3,-2,1>),
                 // AQg_reg as^1 LM^1 NF^0 [0.59,0.71] y=(-2+3*z)/(-2+z)
                 ome_logx<double>({
                   // AQg_reg as^1 LM^1 NF^0 [0.59,0.71] y=(-2+3*z)/(-2+z) H[0, y]^0
@@ -116,7 +116,7 @@ namespace ome
               ),
               // AQg_reg as^1 LM^1 NF^0 [0.71,0.7894736842105263]
               make_ome_genps(
-                f_moebius<double,-3,4,-3,2>,
+                std::function<double(double)>(f_moebius<double,-3,4,-3,2>),
                 // AQg_reg as^1 LM^1 NF^0 [0.71,0.7894736842105263] y=(-3+4*z)/(-3+2*z)
                 ome_logx<double>({
                   // AQg_reg as^1 LM^1 NF^0 [0.71,0.7894736842105263] y=(-3+4*z)/(-3+2*z) H[0, y]^0
@@ -136,7 +136,7 @@ namespace ome
               ),
               // AQg_reg as^1 LM^1 NF^0 [0.7894736842105263,0.92]
               make_ome_genps(
-                f_moebius<double,-5,6,-5,4>,
+                std::function<double(double)>(f_moebius<double,-5,6,-5,4>),
                 // AQg_reg as^1 LM^1 NF^0 [0.7894736842105263,0.92] y=(-5+6*z)/(-5+4*z)
                 ome_logx<double>({
                   // AQg_reg as^1 LM^1 NF^0 [0.7894736842105263,0.92] y=(-5+6*z)/(-5+4*z) H[0, y]^0
@@ -169,7 +169,7 @@ namespace ome
               ),
               // AQg_reg as^1 LM^1 NF^0 [above 0.92]
               make_ome_genps(
-                f_omx<double>,
+                std::function<double(double)>(f_omx<double>),
                 // AQg_reg as^1 LM^1 NF^0 [above 0.92] y=1-x
                 ome_logx<double>({
                   // AQg_reg as^1 LM^1 NF^0 [above 0.92] y=1-x H[0, y]^0
@@ -192,7 +192,7 @@ namespace ome
             {
               // AQg_reg as^2 LM^0 NF^0 [below 0.03125]
               make_ome_genps(
-                f_id<double>,
+                std::function<double(double)>(f_id<double>),
                 // AQg_reg as^2 LM^0 NF^0 [below 0.03125] y=x
                 ome_logx<double>({
                   // AQg_reg as^2 LM^0 NF^0 [below 0.03125] y=x H[0, y]^0
@@ -255,7 +255,7 @@ namespace ome
               ),
               // AQg_reg as^2 LM^0 NF^0 [0.03125,0.18]
               make_ome_genps(
-                f_moebius<double,-1,16,1,14>,
+                std::function<double(double)>(f_moebius<double,-1,16,1,14>),
                 // AQg_reg as^2 LM^0 NF^0 [0.03125,0.18] y=(-1+16*x)/(1+14*x)
                 ome_logx<double>({
                   // AQg_reg as^2 LM^0 NF^0 [0.03125,0.18] y=(-1+16*x)/(1+14*x) H[0, y]^0
@@ -282,7 +282,7 @@ namespace ome
               ),
               // AQg_reg as^2 LM^0 NF^0 [0.18,0.34]
               make_ome_genps(
-                f_moebius<double,-1,4,1,2>,
+                std::function<double(double)>(f_moebius<double,-1,4,1,2>),
                 // AQg_reg as^2 LM^0 NF^0 [0.18,0.34] y=(-1+4*x)/(1+2*x)
                 ome_logx<double>({
                   // AQg_reg as^2 LM^0 NF^0 [0.18,0.34] y=(-1+4*x)/(1+2*x) H[0, y]^0
@@ -309,7 +309,7 @@ namespace ome
               ),
               // AQg_reg as^2 LM^0 NF^0 [0.34,0.59]
               make_ome_genps(
-                f_linear<double,-1,2>,
+                std::function<double(double)>(f_linear<double,-1,2>),
                 // AQg_reg as^2 LM^0 NF^0 [0.34,0.59] y=-1+2*z
                 ome_logx<double>({
                   // AQg_reg as^2 LM^0 NF^0 [0.34,0.59] y=-1+2*z H[0, y]^0
@@ -336,7 +336,7 @@ namespace ome
               ),
               // AQg_reg as^2 LM^0 NF^0 [0.59,0.71]
               make_ome_genps(
-                f_moebius<double,-2,3,-2,1>,
+                std::function<double(double)>(f_moebius<double,-2,3,-2,1>),
                 // AQg_reg as^2 LM^0 NF^0 [0.59,0.71] y=(-2+3*z)/(-2+z)
                 ome_logx<double>({
                   // AQg_reg as^2 LM^0 NF^0 [0.59,0.71] y=(-2+3*z)/(-2+z) H[0, y]^0
@@ -363,7 +363,7 @@ namespace ome
               ),
               // AQg_reg as^2 LM^0 NF^0 [0.71,0.7894736842105263]
               make_ome_genps(
-                f_moebius<double,-3,4,-3,2>,
+                std::function<double(double)>(f_moebius<double,-3,4,-3,2>),
                 // AQg_reg as^2 LM^0 NF^0 [0.71,0.7894736842105263] y=(-3+4*z)/(-3+2*z)
                 ome_logx<double>({
                   // AQg_reg as^2 LM^0 NF^0 [0.71,0.7894736842105263] y=(-3+4*z)/(-3+2*z) H[0, y]^0
@@ -390,7 +390,7 @@ namespace ome
               ),
               // AQg_reg as^2 LM^0 NF^0 [0.7894736842105263,0.92]
               make_ome_genps(
-                f_moebius<double,-5,6,-5,4>,
+                std::function<double(double)>(f_moebius<double,-5,6,-5,4>),
                 // AQg_reg as^2 LM^0 NF^0 [0.7894736842105263,0.92] y=(-5+6*z)/(-5+4*z)
                 ome_logx<double>({
                   // AQg_reg as^2 LM^0 NF^0 [0.7894736842105263,0.92] y=(-5+6*z)/(-5+4*z) H[0, y]^0
@@ -417,7 +417,7 @@ namespace ome
               ),
               // AQg_reg as^2 LM^0 NF^0 [above 0.92]
               make_ome_genps(
-                f_omx<double>,
+                std::function<double(double)>(f_omx<double>),
                 // AQg_reg as^2 LM^0 NF^0 [above 0.92] y=1-x
                 ome_logx<double>({
                   // AQg_reg as^2 LM^0 NF^0 [above 0.92] y=1-x H[0, y]^0
@@ -490,7 +490,7 @@ namespace ome
             {
               // AQg_reg as^2 LM^1 NF^0 [below 0.03125]
               make_ome_genps(
-                f_id<double>,
+                std::function<double(double)>(f_id<double>),
                 // AQg_reg as^2 LM^1 NF^0 [below 0.03125] y=x
                 ome_logx<double>({
                   // AQg_reg as^2 LM^1 NF^0 [below 0.03125] y=x H[0, y]^0
@@ -535,7 +535,7 @@ namespace ome
               ),
               // AQg_reg as^2 LM^1 NF^0 [0.03125,0.18]
               make_ome_genps(
-                f_moebius<double,-1,16,1,14>,
+                std::function<double(double)>(f_moebius<double,-1,16,1,14>),
                 // AQg_reg as^2 LM^1 NF^0 [0.03125,0.18] y=(-1+16*x)/(1+14*x)
                 ome_logx<double>({
                   // AQg_reg as^2 LM^1 NF^0 [0.03125,0.18] y=(-1+16*x)/(1+14*x) H[0, y]^0
@@ -562,7 +562,7 @@ namespace ome
               ),
               // AQg_reg as^2 LM^1 NF^0 [0.18,0.34]
               make_ome_genps(
-                f_moebius<double,-1,4,1,2>,
+                std::function<double(double)>(f_moebius<double,-1,4,1,2>),
                 // AQg_reg as^2 LM^1 NF^0 [0.18,0.34] y=(-1+4*x)/(1+2*x)
                 ome_logx<double>({
                   // AQg_reg as^2 LM^1 NF^0 [0.18,0.34] y=(-1+4*x)/(1+2*x) H[0, y]^0
@@ -589,7 +589,7 @@ namespace ome
               ),
               // AQg_reg as^2 LM^1 NF^0 [0.34,0.59]
               make_ome_genps(
-                f_linear<double,-1,2>,
+                std::function<double(double)>(f_linear<double,-1,2>),
                 // AQg_reg as^2 LM^1 NF^0 [0.34,0.59] y=-1+2*z
                 ome_logx<double>({
                   // AQg_reg as^2 LM^1 NF^0 [0.34,0.59] y=-1+2*z H[0, y]^0
@@ -616,7 +616,7 @@ namespace ome
               ),
               // AQg_reg as^2 LM^1 NF^0 [0.59,0.71]
               make_ome_genps(
-                f_moebius<double,-2,3,-2,1>,
+                std::function<double(double)>(f_moebius<double,-2,3,-2,1>),
                 // AQg_reg as^2 LM^1 NF^0 [0.59,0.71] y=(-2+3*z)/(-2+z)
                 ome_logx<double>({
                   // AQg_reg as^2 LM^1 NF^0 [0.59,0.71] y=(-2+3*z)/(-2+z) H[0, y]^0
@@ -643,7 +643,7 @@ namespace ome
               ),
               // AQg_reg as^2 LM^1 NF^0 [0.71,0.7894736842105263]
               make_ome_genps(
-                f_moebius<double,-3,4,-3,2>,
+                std::function<double(double)>(f_moebius<double,-3,4,-3,2>),
                 // AQg_reg as^2 LM^1 NF^0 [0.71,0.7894736842105263] y=(-3+4*z)/(-3+2*z)
                 ome_logx<double>({
                   // AQg_reg as^2 LM^1 NF^0 [0.71,0.7894736842105263] y=(-3+4*z)/(-3+2*z) H[0, y]^0
@@ -670,7 +670,7 @@ namespace ome
               ),
               // AQg_reg as^2 LM^1 NF^0 [0.7894736842105263,0.92]
               make_ome_genps(
-                f_moebius<double,-5,6,-5,4>,
+                std::function<double(double)>(f_moebius<double,-5,6,-5,4>),
                 // AQg_reg as^2 LM^1 NF^0 [0.7894736842105263,0.92] y=(-5+6*z)/(-5+4*z)
                 ome_logx<double>({
                   // AQg_reg as^2 LM^1 NF^0 [0.7894736842105263,0.92] y=(-5+6*z)/(-5+4*z) H[0, y]^0
@@ -697,7 +697,7 @@ namespace ome
               ),
               // AQg_reg as^2 LM^1 NF^0 [above 0.92]
               make_ome_genps(
-                f_omx<double>,
+                std::function<double(double)>(f_omx<double>),
                 // AQg_reg as^2 LM^1 NF^0 [above 0.92] y=1-x
                 ome_logx<double>({
                   // AQg_reg as^2 LM^1 NF^0 [above 0.92] y=1-x H[0, y]^0
@@ -752,7 +752,7 @@ namespace ome
             {
               // AQg_reg as^2 LM^2 NF^0 [below 0.03125]
               make_ome_genps(
-                f_id<double>,
+                std::function<double(double)>(f_id<double>),
                 // AQg_reg as^2 LM^2 NF^0 [below 0.03125] y=x
                 ome_logx<double>({
                   // AQg_reg as^2 LM^2 NF^0 [below 0.03125] y=x H[0, y]^0
@@ -780,7 +780,7 @@ namespace ome
               ),
               // AQg_reg as^2 LM^2 NF^0 [0.03125,0.18]
               make_ome_genps(
-                f_moebius<double,-1,16,1,14>,
+                std::function<double(double)>(f_moebius<double,-1,16,1,14>),
                 // AQg_reg as^2 LM^2 NF^0 [0.03125,0.18] y=(-1+16*x)/(1+14*x)
                 ome_logx<double>({
                   // AQg_reg as^2 LM^2 NF^0 [0.03125,0.18] y=(-1+16*x)/(1+14*x) H[0, y]^0
@@ -807,7 +807,7 @@ namespace ome
               ),
               // AQg_reg as^2 LM^2 NF^0 [0.18,0.34]
               make_ome_genps(
-                f_moebius<double,-1,4,1,2>,
+                std::function<double(double)>(f_moebius<double,-1,4,1,2>),
                 // AQg_reg as^2 LM^2 NF^0 [0.18,0.34] y=(-1+4*x)/(1+2*x)
                 ome_logx<double>({
                   // AQg_reg as^2 LM^2 NF^0 [0.18,0.34] y=(-1+4*x)/(1+2*x) H[0, y]^0
@@ -834,7 +834,7 @@ namespace ome
               ),
               // AQg_reg as^2 LM^2 NF^0 [0.34,0.59]
               make_ome_genps(
-                f_linear<double,-1,2>,
+                std::function<double(double)>(f_linear<double,-1,2>),
                 // AQg_reg as^2 LM^2 NF^0 [0.34,0.59] y=-1+2*z
                 ome_logx<double>({
                   // AQg_reg as^2 LM^2 NF^0 [0.34,0.59] y=-1+2*z H[0, y]^0
@@ -861,7 +861,7 @@ namespace ome
               ),
               // AQg_reg as^2 LM^2 NF^0 [0.59,0.71]
               make_ome_genps(
-                f_moebius<double,-2,3,-2,1>,
+                std::function<double(double)>(f_moebius<double,-2,3,-2,1>),
                 // AQg_reg as^2 LM^2 NF^0 [0.59,0.71] y=(-2+3*z)/(-2+z)
                 ome_logx<double>({
                   // AQg_reg as^2 LM^2 NF^0 [0.59,0.71] y=(-2+3*z)/(-2+z) H[0, y]^0
@@ -888,7 +888,7 @@ namespace ome
               ),
               // AQg_reg as^2 LM^2 NF^0 [0.71,0.7894736842105263]
               make_ome_genps(
-                f_moebius<double,-3,4,-3,2>,
+                std::function<double(double)>(f_moebius<double,-3,4,-3,2>),
                 // AQg_reg as^2 LM^2 NF^0 [0.71,0.7894736842105263] y=(-3+4*z)/(-3+2*z)
                 ome_logx<double>({
                   // AQg_reg as^2 LM^2 NF^0 [0.71,0.7894736842105263] y=(-3+4*z)/(-3+2*z) H[0, y]^0
@@ -915,7 +915,7 @@ namespace ome
               ),
               // AQg_reg as^2 LM^2 NF^0 [0.7894736842105263,0.92]
               make_ome_genps(
-                f_moebius<double,-5,6,-5,4>,
+                std::function<double(double)>(f_moebius<double,-5,6,-5,4>),
                 // AQg_reg as^2 LM^2 NF^0 [0.7894736842105263,0.92] y=(-5+6*z)/(-5+4*z)
                 ome_logx<double>({
                   // AQg_reg as^2 LM^2 NF^0 [0.7894736842105263,0.92] y=(-5+6*z)/(-5+4*z) H[0, y]^0
@@ -942,7 +942,7 @@ namespace ome
               ),
               // AQg_reg as^2 LM^2 NF^0 [above 0.92]
               make_ome_genps(
-                f_omx<double>,
+                std::function<double(double)>(f_omx<double>),
                 // AQg_reg as^2 LM^2 NF^0 [above 0.92] y=1-x
                 ome_logx<double>({
                   // AQg_reg as^2 LM^2 NF^0 [above 0.92] y=1-x H[0, y]^0
@@ -983,7 +983,7 @@ namespace ome
             {
               // AQg_reg as^3 LM^0 NF^0 [below 0.03125]
               make_ome_genps(
-                f_id<double>,
+                std::function<double(double)>(f_id<double>),
                 // AQg_reg as^3 LM^0 NF^0 [below 0.03125] y=x
                 ome_logx<double>({
                   // AQg_reg as^3 LM^0 NF^0 [below 0.03125] y=x H[0, y]^0
@@ -1109,7 +1109,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^0 NF^0 [0.03125,0.18]
               make_ome_genps(
-                f_moebius<double,-1,16,1,14>,
+                std::function<double(double)>(f_moebius<double,-1,16,1,14>),
                 // AQg_reg as^3 LM^0 NF^0 [0.03125,0.18] y=(-1+16*x)/(1+14*x)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^0 NF^0 [0.03125,0.18] y=(-1+16*x)/(1+14*x) H[0, y]^0
@@ -1136,7 +1136,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^0 NF^0 [0.18,0.34]
               make_ome_genps(
-                f_moebius<double,-1,4,1,2>,
+                std::function<double(double)>(f_moebius<double,-1,4,1,2>),
                 // AQg_reg as^3 LM^0 NF^0 [0.18,0.34] y=(-1+4*x)/(1+2*x)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^0 NF^0 [0.18,0.34] y=(-1+4*x)/(1+2*x) H[0, y]^0
@@ -1164,7 +1164,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^0 NF^0 [0.34,0.59]
               make_ome_genps(
-                f_linear<double,-1,2>,
+                std::function<double(double)>(f_linear<double,-1,2>),
                 // AQg_reg as^3 LM^0 NF^0 [0.34,0.59] y=-1+2*z
                 ome_logx<double>({
                   // AQg_reg as^3 LM^0 NF^0 [0.34,0.59] y=-1+2*z H[0, y]^0
@@ -1191,7 +1191,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^0 NF^0 [0.59,0.71]
               make_ome_genps(
-                f_moebius<double,-2,3,-2,1>,
+                std::function<double(double)>(f_moebius<double,-2,3,-2,1>),
                 // AQg_reg as^3 LM^0 NF^0 [0.59,0.71] y=(-2+3*z)/(-2+z)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^0 NF^0 [0.59,0.71] y=(-2+3*z)/(-2+z) H[0, y]^0
@@ -1220,7 +1220,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^0 NF^0 [0.71,0.7894736842105263]
               make_ome_genps(
-                f_moebius<double,-3,4,-3,2>,
+                std::function<double(double)>(f_moebius<double,-3,4,-3,2>),
                 // AQg_reg as^3 LM^0 NF^0 [0.71,0.7894736842105263] y=(-3+4*z)/(-3+2*z)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^0 NF^0 [0.71,0.7894736842105263] y=(-3+4*z)/(-3+2*z) H[0, y]^0
@@ -1247,7 +1247,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^0 NF^0 [0.7894736842105263,0.92]
               make_ome_genps(
-                f_moebius<double,-5,6,-5,4>,
+                std::function<double(double)>(f_moebius<double,-5,6,-5,4>),
                 // AQg_reg as^3 LM^0 NF^0 [0.7894736842105263,0.92] y=(-5+6*z)/(-5+4*z)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^0 NF^0 [0.7894736842105263,0.92] y=(-5+6*z)/(-5+4*z) H[0, y]^0
@@ -1276,7 +1276,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^0 NF^0 [above 0.92]
               make_ome_genps(
-                f_omx<double>,
+                std::function<double(double)>(f_omx<double>),
                 // AQg_reg as^3 LM^0 NF^0 [above 0.92] y=1-x
                 ome_logx<double>({
                   // AQg_reg as^3 LM^0 NF^0 [above 0.92] y=1-x H[0, y]^0
@@ -1393,7 +1393,7 @@ namespace ome
             {
               // AQg_reg as^3 LM^0 NF^1 [below 0.03125]
               make_ome_genps(
-                f_id<double>,
+                std::function<double(double)>(f_id<double>),
                 // AQg_reg as^3 LM^0 NF^1 [below 0.03125] y=x
                 ome_logx<double>({
                   // AQg_reg as^3 LM^0 NF^1 [below 0.03125] y=x H[0, y]^0
@@ -1478,7 +1478,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^0 NF^1 [0.03125,0.18]
               make_ome_genps(
-                f_moebius<double,-1,16,1,14>,
+                std::function<double(double)>(f_moebius<double,-1,16,1,14>),
                 // AQg_reg as^3 LM^0 NF^1 [0.03125,0.18] y=(-1+16*x)/(1+14*x)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^0 NF^1 [0.03125,0.18] y=(-1+16*x)/(1+14*x) H[0, y]^0
@@ -1505,7 +1505,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^0 NF^1 [0.18,0.34]
               make_ome_genps(
-                f_moebius<double,-1,4,1,2>,
+                std::function<double(double)>(f_moebius<double,-1,4,1,2>),
                 // AQg_reg as^3 LM^0 NF^1 [0.18,0.34] y=(-1+4*x)/(1+2*x)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^0 NF^1 [0.18,0.34] y=(-1+4*x)/(1+2*x) H[0, y]^0
@@ -1532,7 +1532,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^0 NF^1 [0.34,0.59]
               make_ome_genps(
-                f_linear<double,-1,2>,
+                std::function<double(double)>(f_linear<double,-1,2>),
                 // AQg_reg as^3 LM^0 NF^1 [0.34,0.59] y=-1+2*z
                 ome_logx<double>({
                   // AQg_reg as^3 LM^0 NF^1 [0.34,0.59] y=-1+2*z H[0, y]^0
@@ -1559,7 +1559,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^0 NF^1 [0.59,0.71]
               make_ome_genps(
-                f_moebius<double,-2,3,-2,1>,
+                std::function<double(double)>(f_moebius<double,-2,3,-2,1>),
                 // AQg_reg as^3 LM^0 NF^1 [0.59,0.71] y=(-2+3*z)/(-2+z)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^0 NF^1 [0.59,0.71] y=(-2+3*z)/(-2+z) H[0, y]^0
@@ -1586,7 +1586,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^0 NF^1 [0.71,0.7894736842105263]
               make_ome_genps(
-                f_moebius<double,-3,4,-3,2>,
+                std::function<double(double)>(f_moebius<double,-3,4,-3,2>),
                 // AQg_reg as^3 LM^0 NF^1 [0.71,0.7894736842105263] y=(-3+4*z)/(-3+2*z)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^0 NF^1 [0.71,0.7894736842105263] y=(-3+4*z)/(-3+2*z) H[0, y]^0
@@ -1613,7 +1613,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^0 NF^1 [0.7894736842105263,0.92]
               make_ome_genps(
-                f_moebius<double,-5,6,-5,4>,
+                std::function<double(double)>(f_moebius<double,-5,6,-5,4>),
                 // AQg_reg as^3 LM^0 NF^1 [0.7894736842105263,0.92] y=(-5+6*z)/(-5+4*z)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^0 NF^1 [0.7894736842105263,0.92] y=(-5+6*z)/(-5+4*z) H[0, y]^0
@@ -1640,7 +1640,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^0 NF^1 [above 0.92]
               make_ome_genps(
-                f_omx<double>,
+                std::function<double(double)>(f_omx<double>),
                 // AQg_reg as^3 LM^0 NF^1 [above 0.92] y=1-x
                 ome_logx<double>({
                   // AQg_reg as^3 LM^0 NF^1 [above 0.92] y=1-x H[0, y]^0
@@ -1732,7 +1732,7 @@ namespace ome
             {
               // AQg_reg as^3 LM^1 NF^0 [below 0.03125]
               make_ome_genps(
-                f_id<double>,
+                std::function<double(double)>(f_id<double>),
                 // AQg_reg as^3 LM^1 NF^0 [below 0.03125] y=x
                 ome_logx<double>({
                   // AQg_reg as^3 LM^1 NF^0 [below 0.03125] y=x H[0, y]^0
@@ -1813,7 +1813,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^1 NF^0 [0.03125,0.18]
               make_ome_genps(
-                f_moebius<double,-1,16,1,14>,
+                std::function<double(double)>(f_moebius<double,-1,16,1,14>),
                 // AQg_reg as^3 LM^1 NF^0 [0.03125,0.18] y=(-1+16*x)/(1+14*x)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^1 NF^0 [0.03125,0.18] y=(-1+16*x)/(1+14*x) H[0, y]^0
@@ -1840,7 +1840,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^1 NF^0 [0.18,0.34]
               make_ome_genps(
-                f_moebius<double,-1,4,1,2>,
+                std::function<double(double)>(f_moebius<double,-1,4,1,2>),
                 // AQg_reg as^3 LM^1 NF^0 [0.18,0.34] y=(-1+4*x)/(1+2*x)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^1 NF^0 [0.18,0.34] y=(-1+4*x)/(1+2*x) H[0, y]^0
@@ -1867,7 +1867,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^1 NF^0 [0.34,0.59]
               make_ome_genps(
-                f_linear<double,-1,2>,
+                std::function<double(double)>(f_linear<double,-1,2>),
                 // AQg_reg as^3 LM^1 NF^0 [0.34,0.59] y=-1+2*z
                 ome_logx<double>({
                   // AQg_reg as^3 LM^1 NF^0 [0.34,0.59] y=-1+2*z H[0, y]^0
@@ -1894,7 +1894,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^1 NF^0 [0.59,0.71]
               make_ome_genps(
-                f_moebius<double,-2,3,-2,1>,
+                std::function<double(double)>(f_moebius<double,-2,3,-2,1>),
                 // AQg_reg as^3 LM^1 NF^0 [0.59,0.71] y=(-2+3*z)/(-2+z)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^1 NF^0 [0.59,0.71] y=(-2+3*z)/(-2+z) H[0, y]^0
@@ -1921,7 +1921,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^1 NF^0 [0.71,0.7894736842105263]
               make_ome_genps(
-                f_moebius<double,-3,4,-3,2>,
+                std::function<double(double)>(f_moebius<double,-3,4,-3,2>),
                 // AQg_reg as^3 LM^1 NF^0 [0.71,0.7894736842105263] y=(-3+4*z)/(-3+2*z)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^1 NF^0 [0.71,0.7894736842105263] y=(-3+4*z)/(-3+2*z) H[0, y]^0
@@ -1948,7 +1948,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^1 NF^0 [0.7894736842105263,0.92]
               make_ome_genps(
-                f_moebius<double,-5,6,-5,4>,
+                std::function<double(double)>(f_moebius<double,-5,6,-5,4>),
                 // AQg_reg as^3 LM^1 NF^0 [0.7894736842105263,0.92] y=(-5+6*z)/(-5+4*z)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^1 NF^0 [0.7894736842105263,0.92] y=(-5+6*z)/(-5+4*z) H[0, y]^0
@@ -1975,7 +1975,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^1 NF^0 [above 0.92]
               make_ome_genps(
-                f_omx<double>,
+                std::function<double(double)>(f_omx<double>),
                 // AQg_reg as^3 LM^1 NF^0 [above 0.92] y=1-x
                 ome_logx<double>({
                   // AQg_reg as^3 LM^1 NF^0 [above 0.92] y=1-x H[0, y]^0
@@ -2064,7 +2064,7 @@ namespace ome
             {
               // AQg_reg as^3 LM^1 NF^1 [below 0.03125]
               make_ome_genps(
-                f_id<double>,
+                std::function<double(double)>(f_id<double>),
                 // AQg_reg as^3 LM^1 NF^1 [below 0.03125] y=x
                 ome_logx<double>({
                   // AQg_reg as^3 LM^1 NF^1 [below 0.03125] y=x H[0, y]^0
@@ -2131,7 +2131,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^1 NF^1 [0.03125,0.18]
               make_ome_genps(
-                f_moebius<double,-1,16,1,14>,
+                std::function<double(double)>(f_moebius<double,-1,16,1,14>),
                 // AQg_reg as^3 LM^1 NF^1 [0.03125,0.18] y=(-1+16*x)/(1+14*x)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^1 NF^1 [0.03125,0.18] y=(-1+16*x)/(1+14*x) H[0, y]^0
@@ -2158,7 +2158,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^1 NF^1 [0.18,0.34]
               make_ome_genps(
-                f_moebius<double,-1,4,1,2>,
+                std::function<double(double)>(f_moebius<double,-1,4,1,2>),
                 // AQg_reg as^3 LM^1 NF^1 [0.18,0.34] y=(-1+4*x)/(1+2*x)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^1 NF^1 [0.18,0.34] y=(-1+4*x)/(1+2*x) H[0, y]^0
@@ -2185,7 +2185,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^1 NF^1 [0.34,0.59]
               make_ome_genps(
-                f_linear<double,-1,2>,
+                std::function<double(double)>(f_linear<double,-1,2>),
                 // AQg_reg as^3 LM^1 NF^1 [0.34,0.59] y=-1+2*z
                 ome_logx<double>({
                   // AQg_reg as^3 LM^1 NF^1 [0.34,0.59] y=-1+2*z H[0, y]^0
@@ -2212,7 +2212,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^1 NF^1 [0.59,0.71]
               make_ome_genps(
-                f_moebius<double,-2,3,-2,1>,
+                std::function<double(double)>(f_moebius<double,-2,3,-2,1>),
                 // AQg_reg as^3 LM^1 NF^1 [0.59,0.71] y=(-2+3*z)/(-2+z)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^1 NF^1 [0.59,0.71] y=(-2+3*z)/(-2+z) H[0, y]^0
@@ -2239,7 +2239,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^1 NF^1 [0.71,0.7894736842105263]
               make_ome_genps(
-                f_moebius<double,-3,4,-3,2>,
+                std::function<double(double)>(f_moebius<double,-3,4,-3,2>),
                 // AQg_reg as^3 LM^1 NF^1 [0.71,0.7894736842105263] y=(-3+4*z)/(-3+2*z)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^1 NF^1 [0.71,0.7894736842105263] y=(-3+4*z)/(-3+2*z) H[0, y]^0
@@ -2266,7 +2266,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^1 NF^1 [0.7894736842105263,0.92]
               make_ome_genps(
-                f_moebius<double,-5,6,-5,4>,
+                std::function<double(double)>(f_moebius<double,-5,6,-5,4>),
                 // AQg_reg as^3 LM^1 NF^1 [0.7894736842105263,0.92] y=(-5+6*z)/(-5+4*z)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^1 NF^1 [0.7894736842105263,0.92] y=(-5+6*z)/(-5+4*z) H[0, y]^0
@@ -2293,7 +2293,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^1 NF^1 [above 0.92]
               make_ome_genps(
-                f_omx<double>,
+                std::function<double(double)>(f_omx<double>),
                 // AQg_reg as^3 LM^1 NF^1 [above 0.92] y=1-x
                 ome_logx<double>({
                   // AQg_reg as^3 LM^1 NF^1 [above 0.92] y=1-x H[0, y]^0
@@ -2367,7 +2367,7 @@ namespace ome
             {
               // AQg_reg as^3 LM^2 NF^0 [below 0.03125]
               make_ome_genps(
-                f_id<double>,
+                std::function<double(double)>(f_id<double>),
                 // AQg_reg as^3 LM^2 NF^0 [below 0.03125] y=x
                 ome_logx<double>({
                   // AQg_reg as^3 LM^2 NF^0 [below 0.03125] y=x H[0, y]^0
@@ -2430,7 +2430,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^2 NF^0 [0.03125,0.18]
               make_ome_genps(
-                f_moebius<double,-1,16,1,14>,
+                std::function<double(double)>(f_moebius<double,-1,16,1,14>),
                 // AQg_reg as^3 LM^2 NF^0 [0.03125,0.18] y=(-1+16*x)/(1+14*x)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^2 NF^0 [0.03125,0.18] y=(-1+16*x)/(1+14*x) H[0, y]^0
@@ -2457,7 +2457,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^2 NF^0 [0.18,0.34]
               make_ome_genps(
-                f_moebius<double,-1,4,1,2>,
+                std::function<double(double)>(f_moebius<double,-1,4,1,2>),
                 // AQg_reg as^3 LM^2 NF^0 [0.18,0.34] y=(-1+4*x)/(1+2*x)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^2 NF^0 [0.18,0.34] y=(-1+4*x)/(1+2*x) H[0, y]^0
@@ -2484,7 +2484,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^2 NF^0 [0.34,0.59]
               make_ome_genps(
-                f_linear<double,-1,2>,
+                std::function<double(double)>(f_linear<double,-1,2>),
                 // AQg_reg as^3 LM^2 NF^0 [0.34,0.59] y=-1+2*z
                 ome_logx<double>({
                   // AQg_reg as^3 LM^2 NF^0 [0.34,0.59] y=-1+2*z H[0, y]^0
@@ -2511,7 +2511,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^2 NF^0 [0.59,0.71]
               make_ome_genps(
-                f_moebius<double,-2,3,-2,1>,
+                std::function<double(double)>(f_moebius<double,-2,3,-2,1>),
                 // AQg_reg as^3 LM^2 NF^0 [0.59,0.71] y=(-2+3*z)/(-2+z)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^2 NF^0 [0.59,0.71] y=(-2+3*z)/(-2+z) H[0, y]^0
@@ -2538,7 +2538,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^2 NF^0 [0.71,0.7894736842105263]
               make_ome_genps(
-                f_moebius<double,-3,4,-3,2>,
+                std::function<double(double)>(f_moebius<double,-3,4,-3,2>),
                 // AQg_reg as^3 LM^2 NF^0 [0.71,0.7894736842105263] y=(-3+4*z)/(-3+2*z)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^2 NF^0 [0.71,0.7894736842105263] y=(-3+4*z)/(-3+2*z) H[0, y]^0
@@ -2565,7 +2565,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^2 NF^0 [0.7894736842105263,0.92]
               make_ome_genps(
-                f_moebius<double,-5,6,-5,4>,
+                std::function<double(double)>(f_moebius<double,-5,6,-5,4>),
                 // AQg_reg as^3 LM^2 NF^0 [0.7894736842105263,0.92] y=(-5+6*z)/(-5+4*z)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^2 NF^0 [0.7894736842105263,0.92] y=(-5+6*z)/(-5+4*z) H[0, y]^0
@@ -2592,7 +2592,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^2 NF^0 [above 0.92]
               make_ome_genps(
-                f_omx<double>,
+                std::function<double(double)>(f_omx<double>),
                 // AQg_reg as^3 LM^2 NF^0 [above 0.92] y=1-x
                 ome_logx<double>({
                   // AQg_reg as^3 LM^2 NF^0 [above 0.92] y=1-x H[0, y]^0
@@ -2663,7 +2663,7 @@ namespace ome
             {
               // AQg_reg as^3 LM^2 NF^1 [below 0.03125]
               make_ome_genps(
-                f_id<double>,
+                std::function<double(double)>(f_id<double>),
                 // AQg_reg as^3 LM^2 NF^1 [below 0.03125] y=x
                 ome_logx<double>({
                   // AQg_reg as^3 LM^2 NF^1 [below 0.03125] y=x H[0, y]^0
@@ -2713,7 +2713,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^2 NF^1 [0.03125,0.18]
               make_ome_genps(
-                f_moebius<double,-1,16,1,14>,
+                std::function<double(double)>(f_moebius<double,-1,16,1,14>),
                 // AQg_reg as^3 LM^2 NF^1 [0.03125,0.18] y=(-1+16*x)/(1+14*x)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^2 NF^1 [0.03125,0.18] y=(-1+16*x)/(1+14*x) H[0, y]^0
@@ -2740,7 +2740,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^2 NF^1 [0.18,0.34]
               make_ome_genps(
-                f_moebius<double,-1,4,1,2>,
+                std::function<double(double)>(f_moebius<double,-1,4,1,2>),
                 // AQg_reg as^3 LM^2 NF^1 [0.18,0.34] y=(-1+4*x)/(1+2*x)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^2 NF^1 [0.18,0.34] y=(-1+4*x)/(1+2*x) H[0, y]^0
@@ -2767,7 +2767,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^2 NF^1 [0.34,0.59]
               make_ome_genps(
-                f_linear<double,-1,2>,
+                std::function<double(double)>(f_linear<double,-1,2>),
                 // AQg_reg as^3 LM^2 NF^1 [0.34,0.59] y=-1+2*z
                 ome_logx<double>({
                   // AQg_reg as^3 LM^2 NF^1 [0.34,0.59] y=-1+2*z H[0, y]^0
@@ -2794,7 +2794,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^2 NF^1 [0.59,0.71]
               make_ome_genps(
-                f_moebius<double,-2,3,-2,1>,
+                std::function<double(double)>(f_moebius<double,-2,3,-2,1>),
                 // AQg_reg as^3 LM^2 NF^1 [0.59,0.71] y=(-2+3*z)/(-2+z)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^2 NF^1 [0.59,0.71] y=(-2+3*z)/(-2+z) H[0, y]^0
@@ -2821,7 +2821,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^2 NF^1 [0.71,0.7894736842105263]
               make_ome_genps(
-                f_moebius<double,-3,4,-3,2>,
+                std::function<double(double)>(f_moebius<double,-3,4,-3,2>),
                 // AQg_reg as^3 LM^2 NF^1 [0.71,0.7894736842105263] y=(-3+4*z)/(-3+2*z)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^2 NF^1 [0.71,0.7894736842105263] y=(-3+4*z)/(-3+2*z) H[0, y]^0
@@ -2848,7 +2848,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^2 NF^1 [0.7894736842105263,0.92]
               make_ome_genps(
-                f_moebius<double,-5,6,-5,4>,
+                std::function<double(double)>(f_moebius<double,-5,6,-5,4>),
                 // AQg_reg as^3 LM^2 NF^1 [0.7894736842105263,0.92] y=(-5+6*z)/(-5+4*z)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^2 NF^1 [0.7894736842105263,0.92] y=(-5+6*z)/(-5+4*z) H[0, y]^0
@@ -2875,7 +2875,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^2 NF^1 [above 0.92]
               make_ome_genps(
-                f_omx<double>,
+                std::function<double(double)>(f_omx<double>),
                 // AQg_reg as^3 LM^2 NF^1 [above 0.92] y=1-x
                 ome_logx<double>({
                   // AQg_reg as^3 LM^2 NF^1 [above 0.92] y=1-x H[0, y]^0
@@ -2931,7 +2931,7 @@ namespace ome
             {
               // AQg_reg as^3 LM^3 NF^0 [below 0.03125]
               make_ome_genps(
-                f_id<double>,
+                std::function<double(double)>(f_id<double>),
                 // AQg_reg as^3 LM^3 NF^0 [below 0.03125] y=x
                 ome_logx<double>({
                   // AQg_reg as^3 LM^3 NF^0 [below 0.03125] y=x H[0, y]^0
@@ -2977,7 +2977,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^3 NF^0 [0.03125,0.18]
               make_ome_genps(
-                f_moebius<double,-1,16,1,14>,
+                std::function<double(double)>(f_moebius<double,-1,16,1,14>),
                 // AQg_reg as^3 LM^3 NF^0 [0.03125,0.18] y=(-1+16*x)/(1+14*x)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^3 NF^0 [0.03125,0.18] y=(-1+16*x)/(1+14*x) H[0, y]^0
@@ -3004,7 +3004,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^3 NF^0 [0.18,0.34]
               make_ome_genps(
-                f_moebius<double,-1,4,1,2>,
+                std::function<double(double)>(f_moebius<double,-1,4,1,2>),
                 // AQg_reg as^3 LM^3 NF^0 [0.18,0.34] y=(-1+4*x)/(1+2*x)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^3 NF^0 [0.18,0.34] y=(-1+4*x)/(1+2*x) H[0, y]^0
@@ -3031,7 +3031,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^3 NF^0 [0.34,0.59]
               make_ome_genps(
-                f_linear<double,-1,2>,
+                std::function<double(double)>(f_linear<double,-1,2>),
                 // AQg_reg as^3 LM^3 NF^0 [0.34,0.59] y=-1+2*z
                 ome_logx<double>({
                   // AQg_reg as^3 LM^3 NF^0 [0.34,0.59] y=-1+2*z H[0, y]^0
@@ -3058,7 +3058,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^3 NF^0 [0.59,0.71]
               make_ome_genps(
-                f_moebius<double,-2,3,-2,1>,
+                std::function<double(double)>(f_moebius<double,-2,3,-2,1>),
                 // AQg_reg as^3 LM^3 NF^0 [0.59,0.71] y=(-2+3*z)/(-2+z)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^3 NF^0 [0.59,0.71] y=(-2+3*z)/(-2+z) H[0, y]^0
@@ -3085,7 +3085,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^3 NF^0 [0.71,0.7894736842105263]
               make_ome_genps(
-                f_moebius<double,-3,4,-3,2>,
+                std::function<double(double)>(f_moebius<double,-3,4,-3,2>),
                 // AQg_reg as^3 LM^3 NF^0 [0.71,0.7894736842105263] y=(-3+4*z)/(-3+2*z)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^3 NF^0 [0.71,0.7894736842105263] y=(-3+4*z)/(-3+2*z) H[0, y]^0
@@ -3112,7 +3112,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^3 NF^0 [0.7894736842105263,0.92]
               make_ome_genps(
-                f_moebius<double,-5,6,-5,4>,
+                std::function<double(double)>(f_moebius<double,-5,6,-5,4>),
                 // AQg_reg as^3 LM^3 NF^0 [0.7894736842105263,0.92] y=(-5+6*z)/(-5+4*z)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^3 NF^0 [0.7894736842105263,0.92] y=(-5+6*z)/(-5+4*z) H[0, y]^0
@@ -3139,7 +3139,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^3 NF^0 [above 0.92]
               make_ome_genps(
-                f_omx<double>,
+                std::function<double(double)>(f_omx<double>),
                 // AQg_reg as^3 LM^3 NF^0 [above 0.92] y=1-x
                 ome_logx<double>({
                   // AQg_reg as^3 LM^3 NF^0 [above 0.92] y=1-x H[0, y]^0
@@ -3192,7 +3192,7 @@ namespace ome
             {
               // AQg_reg as^3 LM^3 NF^1 [below 0.03125]
               make_ome_genps(
-                f_id<double>,
+                std::function<double(double)>(f_id<double>),
                 // AQg_reg as^3 LM^3 NF^1 [below 0.03125] y=x
                 ome_logx<double>({
                   // AQg_reg as^3 LM^3 NF^1 [below 0.03125] y=x H[0, y]^0
@@ -3225,7 +3225,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^3 NF^1 [0.03125,0.18]
               make_ome_genps(
-                f_moebius<double,-1,16,1,14>,
+                std::function<double(double)>(f_moebius<double,-1,16,1,14>),
                 // AQg_reg as^3 LM^3 NF^1 [0.03125,0.18] y=(-1+16*x)/(1+14*x)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^3 NF^1 [0.03125,0.18] y=(-1+16*x)/(1+14*x) H[0, y]^0
@@ -3252,7 +3252,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^3 NF^1 [0.18,0.34]
               make_ome_genps(
-                f_moebius<double,-1,4,1,2>,
+                std::function<double(double)>(f_moebius<double,-1,4,1,2>),
                 // AQg_reg as^3 LM^3 NF^1 [0.18,0.34] y=(-1+4*x)/(1+2*x)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^3 NF^1 [0.18,0.34] y=(-1+4*x)/(1+2*x) H[0, y]^0
@@ -3279,7 +3279,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^3 NF^1 [0.34,0.59]
               make_ome_genps(
-                f_linear<double,-1,2>,
+                std::function<double(double)>(f_linear<double,-1,2>),
                 // AQg_reg as^3 LM^3 NF^1 [0.34,0.59] y=-1+2*z
                 ome_logx<double>({
                   // AQg_reg as^3 LM^3 NF^1 [0.34,0.59] y=-1+2*z H[0, y]^0
@@ -3306,7 +3306,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^3 NF^1 [0.59,0.71]
               make_ome_genps(
-                f_moebius<double,-2,3,-2,1>,
+                std::function<double(double)>(f_moebius<double,-2,3,-2,1>),
                 // AQg_reg as^3 LM^3 NF^1 [0.59,0.71] y=(-2+3*z)/(-2+z)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^3 NF^1 [0.59,0.71] y=(-2+3*z)/(-2+z) H[0, y]^0
@@ -3333,7 +3333,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^3 NF^1 [0.71,0.7894736842105263]
               make_ome_genps(
-                f_moebius<double,-3,4,-3,2>,
+                std::function<double(double)>(f_moebius<double,-3,4,-3,2>),
                 // AQg_reg as^3 LM^3 NF^1 [0.71,0.7894736842105263] y=(-3+4*z)/(-3+2*z)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^3 NF^1 [0.71,0.7894736842105263] y=(-3+4*z)/(-3+2*z) H[0, y]^0
@@ -3360,7 +3360,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^3 NF^1 [0.7894736842105263,0.92]
               make_ome_genps(
-                f_moebius<double,-5,6,-5,4>,
+                std::function<double(double)>(f_moebius<double,-5,6,-5,4>),
                 // AQg_reg as^3 LM^3 NF^1 [0.7894736842105263,0.92] y=(-5+6*z)/(-5+4*z)
                 ome_logx<double>({
                   // AQg_reg as^3 LM^3 NF^1 [0.7894736842105263,0.92] y=(-5+6*z)/(-5+4*z) H[0, y]^0
@@ -3387,7 +3387,7 @@ namespace ome
               ),
               // AQg_reg as^3 LM^3 NF^1 [above 0.92]
               make_ome_genps(
-                f_omx<double>,
+                std::function<double(double)>(f_omx<double>),
                 // AQg_reg as^3 LM^3 NF^1 [above 0.92] y=1-x
                 ome_logx<double>({
                   // AQg_reg as^3 LM^3 NF^1 [above 0.92] y=1-x H[0, y]^0

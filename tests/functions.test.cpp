@@ -126,8 +126,8 @@ TEST(FunctionsFuncPlusFuncOmxTest, EvalPlusInt)
   func_plusfunc_omx<double, laurent_polynomial<double, double>>
     fplus(laurent_polynomial<double, double>({4.0,5.0,6.0}));
 
-  constexpr double x = 0.4;
-  constexpr double lomx = std::log(1.-x);
+  double x = 0.4;
+  double lomx = std::log(1.-x);
   EXPECT_DOUBLE_EQ(fplus.eval_plus_int(x),
     -4.*lomx - 2.5*std::pow(lomx,2) - 2.*pow(lomx,3));
 }
