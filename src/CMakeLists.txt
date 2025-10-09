@@ -18,7 +18,8 @@ add_library(ome ome/integration_engine_gsl.cpp
 set_target_properties(ome PROPERTIES SOVERSION 1)
 target_include_directories(ome PUBLIC .)
 target_link_libraries(ome PRIVATE GSL::gsl)
-target_sources(ome PUBLIC FILE_SET headers TYPE HEADERS FILES
+install(TARGETS ome)
+install(FILES
                ome/functions.h
                ome/integration_engine.h
                ome/integration_engine_gsl.h
@@ -45,6 +46,5 @@ target_sources(ome PUBLIC FILE_SET headers TYPE HEADERS FILES
                ome/polAqgQ.h
                ome/polAqqQPS.h
                ome/polAQg.h
+               TYPE INCLUDE
               )
-install(TARGETS ome)
-install(TARGETS ome FILE_SET headers)
