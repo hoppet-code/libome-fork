@@ -16,6 +16,7 @@
 #include <functional>
 #include <algorithm>
 #include <numeric>
+#include <limits>
 #include <cmath>
 #include <cassert>
 
@@ -232,7 +233,7 @@ namespace ome
       numeric_type operator()(numeric_type x, Trest... rest) const
       {
         using std::log;
-        return(target_function_(log(x), x, rest...));
+        return(target_function_(x > 0 ? log(x) : std::numeric_limits<numeric_type>::quiet_NaN(), x, rest...));
       };
 
     private:
