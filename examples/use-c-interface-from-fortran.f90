@@ -31,7 +31,7 @@ program FortranExample
   ! precompute the mass logarithm
   LM = log(m2/mu2)
   ! Bjorken x
-  x = 0.2
+  x = exp(-0.479603) !GPS for triggering FPE !0.2
 
   write (*,*) ome_AqqQNSEven_reg(as, LM, NF, x)
 end program
