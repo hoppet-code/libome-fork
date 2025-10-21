@@ -17,7 +17,7 @@ jobs:
           ls /opt/homebrew/bin/gfortran*
     - name: Compile
       run: |
-          cmake -S . -B BUILD -DCMAKE_INSTALL_PREFIX=$(pwd)/../INSTALL  -DBUILD_EXAMPLES=ON -DBUILD_FORTRAN_EXAMPLE=ON
+          cmake -S . -B BUILD -DCMAKE_INSTALL_PREFIX=$(pwd)/../INSTALL  -DBUILD_EXAMPLES=ON -DBUILD_FORTRAN_EXAMPLE=ON -DCMAKE_Fortran_COMPILER=gfortran-15
           cmake --build BUILD -j 4
           lldb --batch -o run -k "bt all" -k "quit" -- BUILD/examples/use-c-interface-from-fortran 2>&1
           cmake --install BUILD
