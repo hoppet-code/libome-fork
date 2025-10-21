@@ -13,7 +13,7 @@ jobs:
     - name: Install 
       run: |
           uname -a
-          brew install wget coreutils gcc gfortran python3 swig numpy
+          brew install wget coreutils gcc gfortran gsl
           ls /opt/homebrew/bin/gfortran*
     - name: Compile
       run: |
