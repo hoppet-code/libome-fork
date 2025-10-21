@@ -1,0 +1,24 @@
+name: build
+on:
+ push:
+ pull_request:
+
+jobs:
+  compilejobMacOS:
+    runs-on: macos-latest
+    name: MacOS-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v5
+    - name: Install 
+      run: |
+          uname -a
+          brew install wget coreutils gcc gfortran python3 swig numpy
+          ls /opt/homebrew/bin/gfortran*
+    - name: Compile
+      run: |
+          cmake -S . -B BUILD -DCMAKE_INSTALL_PREFIX=$(pwd)/../INSTALL  -DBUILD_EXAMPLES=ON -DBUILD_FORTRAN_EXAMPLE=ON
+          cmake --build BUILD -j 4
+          lldb --batch -o run -k "bt all" -k "quit" -- BUILD/examples/use-c-interface-from-fortran 2>&1
+          cmake --install BUILD
+          ctest --test-dir BUILD -j 4 --output-on-failure
